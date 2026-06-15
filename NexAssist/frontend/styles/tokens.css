@@ -1,0 +1,40 @@
+:root {
+  --background: 222 47% 3%;
+  --background-secondary: 222 40% 5%;
+  --card: 220 35% 7%;
+  --card-hover: 220 35% 9%;
+  --popover: 220 35% 7%;
+  --foreground: 210 40% 94%;
+  --foreground-muted: 215 25% 55%;
+  --popover-foreground: 210 40% 94%;
+  --card-foreground: 210 40% 94%;
+  --primary: 258 90% 66%;
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 258 90% 66%;
+  --accent: 189 94% 43%;
+  --accent-foreground: 222 47% 3%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 222 47% 3%;
+  --success: 160 84% 39%;
+  --success-foreground: 0 0% 100%;
+  --border: 220 25% 13%;
+  --border-glow: 258 90% 66%;
+  --input: 220 25% 11%;
+  --ring: 258 90% 66%;
+  --sidebar: 222 47% 4%;
+  --sidebar-foreground: 210 30% 80%;
+  --sidebar-muted: 220 25% 8%;
+  --sidebar-active: 258 90% 66%;
+  --sidebar-border: 220 25% 10%;
+  --muted: 220 25% 8%;
+  --muted-foreground: 215 20% 50%;
+  --radius: 0.5rem;
+
+  /* Festival accent palette */
+  --fest-pink: 322 90% 60%;
+  --fest-orange: 28 95% 58%;
+  --fest-violet: 258 90% 66%;
+  --fest-cyan: 189 94% 50%;
+}

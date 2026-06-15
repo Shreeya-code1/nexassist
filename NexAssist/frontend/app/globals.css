@@ -1,0 +1,142 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 85%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 65% 50%, rgba(255,255,255,0.4) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-fest {
+  background: linear-gradient(120deg, #ec4899 0%, #7c3aed 45%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-fest {
+  background: linear-gradient(120deg, #ec4899 0%, #7c3aed 50%, #06b6d4 100%);
+  background-size: 200% 200%;
+  transition: background-position 400ms ease, transform 150ms ease, box-shadow 200ms ease;
+}
+
+.btn-fest:hover {
+  background-position: 100% 0%;
+}
+
+.glow-border {
+  border: 1px solid rgba(124,58,237,0.5);
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.2), 0 0 16px rgba(124,58,237,0.15);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.auth-shell form > input {
+  border-color: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.96);
+}
+
+.auth-shell form > input::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+.auth-shell form > input:focus {
+  border-color: rgba(124,58,237,0.6);
+  box-shadow: 0 0 0 2px rgba(124,58,237,0.2);
+}
+
+.auth-shell form > button {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  box-shadow: 0 0 20px rgba(124,58,237,0.4);
+  transition: filter 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.auth-shell form > button:hover {
+  filter: brightness(1.1);
+}
+
+.auth-shell form > button:active {
+  transform: scale(0.98);
+}
+
+.auth-shell form + div {
+  color: rgba(255,255,255,0.5);
+}
+
+.auth-card-shell > div {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(124,58,237,0.5);
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.2), 0 0 16px rgba(124,58,237,0.15);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(124,58,237,0.3); }
+  50% { box-shadow: 0 0 24px rgba(124,58,237,0.7); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(6px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(6px) rotate(-360deg); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
